@@ -1,8 +1,7 @@
-#summary fuzzyfinder.vim の説明書
+#summary Description in Japanese
+fuzzyfinder.vim の説明書 version 2.17
 
-version 2.17
-
-リリースノート http://d.hatena.ne.jp/ns9tks/searchdiary?word=*[release]
+リリースノート http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D
 
 = 概要 =
 
@@ -93,10 +92,10 @@ fuzzyfinder.vim ファイルを plugin ディレクトリへコピー
 
 === 入力の確定 ===
 
-	* <CR> で直前のウィンドウにファイルを開きます。
-	* <C-j> で直前のウィンドウを水平分割して開きます。
-	* <C-k> で直前のウィンドウを垂直分割して開きます。
-	* <C-]> で新しいタブページで開きます。
+	* `<CR>` で直前のウィンドウにファイルを開きます。
+	* `<C-j>` で直前のウィンドウを水平分割して開きます。
+	* `<C-k>` で直前のウィンドウを垂直分割して開きます。
+	* `<C-]>` で新しいタブページで開きます。
 
 === ディレクトリの再帰検索 ===
 
@@ -104,11 +103,11 @@ fuzzyfinder.vim ファイルを plugin ディレクトリへコピー
 
 === モードの切り替え ===
 
-<C-l> 又は <C-o> で一旦終了することなくモードを切り替えることが可能です。
+`<C-l>` 又は `<C-o>` で一旦終了することなくモードを切り替えることが可能です。
 
 === 大文字小文字の無視/区別状態の一時切り替え ===
 
-オプションで設定した状態が初期状態となるが、 <C-t> で一時的に切り替えることが可能です。
+オプションで設定した状態が初期状態となるが、 `<C-t>` で一時的に切り替えることが可能です。
 
 == ハイライトについて ==
 
@@ -116,7 +115,7 @@ fuzzyfinder.vim ファイルを plugin ディレクトリへコピー
 
 == Fuzzyfinder によるタグジャンプについて ==
 
-:tag や <C-]> を置き換えるマッピング例:
+:tag や `<C-]>` を置き換えるマッピング例:
 
 {{{
 nnoremap <silent> <C-f><C-t> :FuzzyFinderTag!<CR>
@@ -172,7 +171,7 @@ WORKtxt
 == ブックマークモードについて ==
 
 事前にブックマークした行へジャンプすることができます。
-Fuzzyfinder はジャンプする行を調整します。ブックマークした位置の行がブックマークしたときのパターンと異なる場合、Fuzzyfinder はブックマークした位置の周辺でブックマークしたときのパターンとマッチする行を探します。なので、ブックマークした行がブックマークしたときの位置からずれていても、そこへジャンプすることができます。もしブックマークした行番号へ調整することなくジャンプしたい場合、 g:FuzzyFinderOptions.Bookmark.searching_range オプションに 0 を設定してください。
+Fuzzyfinder はジャンプする行を調整します。ブックマークした位置の行がブックマークしたときのパターンと異なる場合、Fuzzyfinder はブックマークした位置の周辺でブックマークしたときのパターンとマッチする行を探します。なので、ブックマークした行がブックマークしたときの位置からずれていても、そこへジャンプすることができます。もしブックマークした行番号へ調整することなくジャンプしたい場合、 `g:FuzzyFinderOptions.Bookmark.searching_range` オプションに 0 を設定してください。
 
 == ブックマークの追加 ==
 
@@ -198,245 +197,245 @@ FuzzyfinderはMRUやお気に入り等の情報をファイルに保存します
 
 = オプション =
 
-オプション名、初期値などはよく変更されるので注意してください。辞書型変数のg:FuzzyFinderOptionsを通じてオプションを設定することができます。ソース内の "INITIALIZATION: GLOBAL OPTIONS:" セクションから必要なエントリを .vimr にコピーして値を編集するのがオプションを設定する最も簡単な方法です。各オプションのデフォルト値もそこで確認できます。
+オプション名、初期値などはよく変更されるので注意してください。辞書型変数の `g:FuzzyFinderOptions` を通じてオプションを設定することができます。ソース内の "INITIALIZATION: GLOBAL OPTIONS:" セクションから必要なエントリを .vimr にコピーして値を編集するのがオプションを設定する最も簡単な方法です。各オプションのデフォルト値もそこで確認できます。
 
 == 全モード ==
 
-=== g:FuzzyFinderOptions.Base.key_open  ===
+=== `g:FuzzyFinderOptions.Base.key_open`  ===
 
 補完を確定し、バッファやファイル等を直前のウィンドウで開くキー
 
-=== g:FuzzyFinderOptions.Base.key_open_split  ===
+=== `g:FuzzyFinderOptions.Base.key_open_split`  ===
 
 補完を確定し、バッファやファイル等を直前のウィンドウを水平分割して開くキー
 
-=== g:FuzzyFinderOptions.Base.key_open_vsplit  ===
+=== `g:FuzzyFinderOptions.Base.key_open_vsplit`  ===
 
 補完を確定し、バッファやファイル等を直前のウィンドウを垂直分割して開くキー
 
-=== g:FuzzyFinderOptions.Base.key_open_tab  ===
+=== `g:FuzzyFinderOptions.Base.key_open_tab`  ===
 
 補完を確定し、バッファやファイル等を新しいタブページで開くキー
 
-=== g:FuzzyFinderOptions.Base.key_next_mode  ===
+=== `g:FuzzyFinderOptions.Base.key_next_mode`  ===
 
 インサートモードを抜けることなく次のモードに切り替えるキー
 
-=== g:FuzzyFinderOptions.Base.key_prev_mode  ===
+=== `g:FuzzyFinderOptions.Base.key_prev_mode`  ===
 
 インサートモードを抜けることなく前のモードに切り替えるキー
 
-=== g:FuzzyFinderOptions.Base.key_ignore_case  ===
+=== `g:FuzzyFinderOptions.Base.key_ignore_case`  ===
 
 インサートモードを抜けることなく大文字小文字の違いを無視するかどうかを一時的に切り替えるキー
 
-=== g:FuzzyFinderOptions.Base.info_file  ===
+=== `g:FuzzyFinderOptions.Base.info_file`  ===
 
 MRU等の情報を書き込むファイルのパス。''を設定するとファイルへの書き込みは行われなくなります。
 
-=== g:FuzzyFinderOptions.Base.min_length  ===
+=== `g:FuzzyFinderOptions.Base.min_length`  ===
 
 入力されたテキストがこの値未満なら補完を開始しません。
 
-=== g:FuzzyFinderOptions.Base.abbrev_map  ===
+=== `g:FuzzyFinderOptions.Base.abbrev_map`  ===
 
 dictionary型で、それぞれの値はlist型です。入力されたテキストの、キーにマッチする部分が対応する値に展開されます。
 
-=== g:FuzzyFinderOptions.Base.ignore_case  ===
+=== `g:FuzzyFinderOptions.Base.ignore_case`  ===
 
 真なら大文字小文字の違いを無視します。
 
-=== g:FuzzyFinderOptions.Base.time_format  ===
+=== `g:FuzzyFinderOptions.Base.time_format`  ===
 
 アイテムが登録された日時の書式を設定します。書式の詳細は:help strftime()を参照してください。
 
-=== g:FuzzyFinderOptions.Base.learning_limit  ===
+=== `g:FuzzyFinderOptions.Base.learning_limit`  ===
 
 保持する学習データの上限値です。
 
-=== g:FuzzyFinderOptions.Base.enumerating_limit  ===
+=== `g:FuzzyFinderOptions.Base.enumerating_limit`  ===
 
 応答時間を改善するために、Fuzzyfinder は補完アイテムの列挙をこの値に達した時点で打ち切ります。
 
-=== g:FuzzyFinderOptions.Base.trim_length  ===
+=== `g:FuzzyFinderOptions.Base.trim_length`  ===
 
 文字列長がこの値を超える補完候補はトリムしてから補完メニューに表示します。
 
-=== g:FuzzyFinderOptions.Base.lasting_cache  ===
+=== `g:FuzzyFinderOptions.Base.lasting_cache`  ===
 
 真なら補完リストのキャッシュを開放せずに次回以降再利用するようになります。
 
-=== g:FuzzyFinderOptions.Base.migemo_support  ===
+=== `g:FuzzyFinderOptions.Base.migemo_support`  ===
 
 真なら migemo を利用します。
 
 
 == バッファモード ==
 
-=== g:FuzzyFinderOptions.Buffer.mode_available  ===
+=== `g:FuzzyFinderOptions.Buffer.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.Buffer.prompt  ===
+=== `g:FuzzyFinderOptions.Buffer.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.Buffer.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.Buffer.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.Buffer.smart_bs  ===
+=== `g:FuzzyFinderOptions.Buffer.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.Buffer.switch_order  ===
+=== `g:FuzzyFinderOptions.Buffer.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.Buffer.mru_order  ===
+=== `g:FuzzyFinderOptions.Buffer.mru_order`  ===
 
 真なら最後に使った時間順に補完候補をソートします。
 
 
 == ファイルモード ==
 
-=== g:FuzzyFinderOptions.File.mode_available  ===
+=== `g:FuzzyFinderOptions.File.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.File.prompt  ===
+=== `g:FuzzyFinderOptions.File.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.File.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.File.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.File.smart_bs  ===
+=== `g:FuzzyFinderOptions.File.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.File.switch_order  ===
+=== `g:FuzzyFinderOptions.File.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.File.excluded_path  ===
+=== `g:FuzzyFinderOptions.File.excluded_path`  ===
 
 これにマッチするパスの項目は除外されます。
 
 
 == ディレクトリモード ==
 
-=== g:FuzzyFinderOptions.Dir.mode_available  ===
+=== `g:FuzzyFinderOptions.Dir.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.Dir.prompt  ===
+=== `g:FuzzyFinderOptions.Dir.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.Dir.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.Dir.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.Dir.smart_bs  ===
+=== `g:FuzzyFinderOptions.Dir.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.Dir.switch_order  ===
+=== `g:FuzzyFinderOptions.Dir.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.Dir.excluded_path  ===
+=== `g:FuzzyFinderOptions.Dir.excluded_path`  ===
 
 これにマッチするパスの項目は除外されます。
 
 
 == MRUファイルモード ==
 
-=== g:FuzzyFinderOptions.MruFile.mode_available  ===
+=== `g:FuzzyFinderOptions.MruFile.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.MruFile.prompt  ===
+=== `g:FuzzyFinderOptions.MruFile.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.MruFile.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.MruFile.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.MruFile.smart_bs  ===
+=== `g:FuzzyFinderOptions.MruFile.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.MruFile.switch_order  ===
+=== `g:FuzzyFinderOptions.MruFile.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.MruFile.excluded_path  ===
+=== `g:FuzzyFinderOptions.MruFile.excluded_path`  ===
 
 これにマッチするパスの項目は除外されます。
 
-=== g:FuzzyFinderOptions.MruFile.max_item  ===
+=== `g:FuzzyFinderOptions.MruFile.max_item`  ===
 
 保持する項目数の上限を設定します。
 
 
 == MRUコマンドモード ==
 
-=== g:FuzzyFinderOptions.MruCmd.mode_available  ===
+=== `g:FuzzyFinderOptions.MruCmd.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.MruCmd.prompt  ===
+=== `g:FuzzyFinderOptions.MruCmd.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.MruCmd.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.MruCmd.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.MruCmd.smart_bs  ===
+=== `g:FuzzyFinderOptions.MruCmd.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.MruCmd.switch_order  ===
+=== `g:FuzzyFinderOptions.MruCmd.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.MruCmd.excluded_command  ===
+=== `g:FuzzyFinderOptions.MruCmd.excluded_command`  ===
 
 これにマッチするコマンドの項目は除外されます。
 
-=== g:FuzzyFinderOptions.MruCmd.max_item  ===
+=== `g:FuzzyFinderOptions.MruCmd.max_item`  ===
 
 保持する項目数の上限を設定します。
 
 
 == ブックマークモード ==
 
-=== g:FuzzyFinderOptions.Bookmark.mode_available  ===
+=== `g:FuzzyFinderOptions.Bookmark.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.Bookmark.prompt  ===
+=== `g:FuzzyFinderOptions.Bookmark.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.Bookmark.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.Bookmark.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.Bookmark.smart_bs  ===
+=== `g:FuzzyFinderOptions.Bookmark.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.Bookmark.switch_order  ===
+=== `g:FuzzyFinderOptions.Bookmark.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.Bookmark.searching_range  ===
+=== `g:FuzzyFinderOptions.Bookmark.searching_range`  ===
 
 この行数の範囲でブックマークした位置からブックマークしたときのパターンとマッチする行を探します。
 
@@ -444,50 +443,50 @@ dictionary型で、それぞれの値はlist型です。入力されたテキス
 
 == タグモード ==
 
-=== g:FuzzyFinderOptions.Tag.mode_available  ===
+=== `g:FuzzyFinderOptions.Tag.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.Tag.prompt  ===
+=== `g:FuzzyFinderOptions.Tag.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.Tag.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.Tag.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.Tag.smart_bs  ===
+=== `g:FuzzyFinderOptions.Tag.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.Tag.switch_order  ===
+=== `g:FuzzyFinderOptions.Tag.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
-=== g:FuzzyFinderOptions.Tag.excluded_path  ===
+=== `g:FuzzyFinderOptions.Tag.excluded_path`  ===
 
 これにマッチするパスの項目は除外されます。
 
 
 == タグ内ファイルモード ==
 
-=== g:FuzzyFinderOptions.TaggedFile.mode_available  ===
+=== `g:FuzzyFinderOptions.TaggedFile.mode_available`  ===
 
 偽ならこのモードに関する全機能を無効化します。
 
-=== g:FuzzyFinderOptions.TaggedFile.prompt  ===
+=== `g:FuzzyFinderOptions.TaggedFile.prompt`  ===
 
 プロンプト文字列を設定します。
 
-=== g:FuzzyFinderOptions.TaggedFile.prompt_highlight  ===
+=== `g:FuzzyFinderOptions.TaggedFile.prompt_highlight`  ===
 
 プロンプトをハイライトするグループ名を設定します。
 
-=== g:FuzzyFinderOptions.TaggedFile.smart_bs  ===
+=== `g:FuzzyFinderOptions.TaggedFile.smart_bs`  ===
 
 パス区切り文字の直後で BS キーを押すと ディレクトリ名一つ分を削除します。
 
-=== g:FuzzyFinderOptions.TaggedFile.switch_order  ===
+=== `g:FuzzyFinderOptions.TaggedFile.switch_order`  ===
 
 次/前のモードに切り替えるためにモードをソートするときに、比較値として利用します。
 
@@ -524,7 +523,7 @@ nnoremap <silent> <C-f><C-e> :FuzzyFinderEditInfo<CR>
 
   * bluewind: http://cspace.s2.xrea.com/software/bluewind/
   * lookupfile: http://www.vim.org/scripts/script.php?script_id=1581
-  * LustyExplorer: http://www.vim.org/scripts/script.php?script_id=1890
+  * !LustyExplorer: http://www.vim.org/scripts/script.php?script_id=1890
   * mru.vim: http://www.vim.org/scripts/script.php?script_id=521
 
 = 連絡先 =
