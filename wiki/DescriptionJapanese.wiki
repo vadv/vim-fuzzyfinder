@@ -534,4 +534,4 @@ http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D
 = 連絡先 =
 
 メールかリリースノートのコメント欄でどうぞ。
-バグや要望に関しては、できれば [Issues http://code.google.com/p/vim-fuzzyfinder/issues/list] に登録するようにしてください。
+バグや要望に関しては、できれば [http://code.google.com/p/vim-fuzzyfinder/issues/list Issues] に登録するようにしてください。
