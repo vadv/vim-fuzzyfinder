@@ -1,7 +1,8 @@
 #summary Description in Japanese
-fuzzyfinder.vim の説明書 version 2.17
+#sidebar TableOfContents
+fuzzyfinder.vim の説明書 version 2.17 (リリースノート: http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D )
 
-リリースノート http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D
+<wiki:toc max_depth="1" />
 
 = 概要 =
 
