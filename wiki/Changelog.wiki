@@ -1,5 +1,9 @@
 #summary Changelog
 
+= Not yet released =
+
+  * Fixed a bug that an error occurs if current directory included spaces. Thanks id:cho45.
+
 = 2.19 =
 
   * Changed MRU-File mode that always formats completion items to be relative to the home directory.
