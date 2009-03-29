@@ -1,0 +1,3 @@
+#summary Installation
+
+Drop this file in your plugin directory.
