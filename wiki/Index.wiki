@@ -1,0 +1,12 @@
+= Table of Contents =
+
+  # [Introduction Introduction to fuzzyfinder.vim]
+  # [Installation Download and installation]
+  # [Usage Usage]
+  # [Options Options]
+  # [SettingExample Settting Example]
+  # [SpecialThanks Special thanks]
+  # [Changelog]
+
+= For Japanese =
+  # [DescriptionJapanese Description in Japanese]
