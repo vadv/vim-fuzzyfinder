@@ -1,6 +1,6 @@
 #summary Description in Japanese
 
-fuzzyfinder.vim の説明書 version 2.17 (リリースノート: http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D )
+fuzzyfinder.vim の説明書 version 2.17
 
 <wiki:toc max_depth="1" />
 
@@ -526,6 +526,10 @@ nnoremap <silent> <C-f><C-e> :FuzzyFinderEditInfo<CR>
   * lookupfile: http://www.vim.org/scripts/script.php?script_id=1581
   * !LustyExplorer: http://www.vim.org/scripts/script.php?script_id=1890
   * mru.vim: http://www.vim.org/scripts/script.php?script_id=521
+
+= リリースノート =
+
+http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D
 
 = 連絡先 =
 
