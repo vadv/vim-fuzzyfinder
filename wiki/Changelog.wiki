@@ -15,7 +15,7 @@
 = 2.17 =
 
   * Introduced a learning system for the sorting of completion items.
-  * Added g:FuzzyFinderOptions.Base.learning_limit option.
+  * Added `g:FuzzyFinderOptions.Base.learning_limit` option.
   * Changed the specification of the information file. Please remove your information file for Fuzzyfinder.
 
 = 2.16 =
@@ -43,7 +43,7 @@
 = 2.12 =
 
   * Changed to be able to show completion items in the order of recently used in Buffer mode.
-  * Added g:FuzzyFinderOptions.Buffer.mru_order option.
+  * Added `g:FuzzyFinderOptions.Buffer.mru_order` option.
 
 = 2.11 =
 
@@ -56,18 +56,18 @@
   * Fixed a bug that a filename to open was not been escaped.
   * Added 'prompt' option.
   * Added 'prompt_highlight' option.
-  * Removed g:FuzzyFinderOptions.MruFile.no_special_buffer option.
+  * Removed `g:FuzzyFinderOptions.MruFile.no_special_buffer` option.
 
 = 2.9 =
 
   * Enhanced `<BS>` behavior in Fuzzyfinder and added 'smart_bs' option.
   * Fixed a bug that entered pattern was not been escaped.
   * Fixed not to insert `"zv"` with `"c/pattern<CR>"` command in Normal mode.
-  * Avoid the slow down problem caused by filereadable() check for the MRU information in BufEnter/BufWritePost.
+  * Avoid the slow down problem caused by filereadable() check for the MRU information in `BufEnter`/`BufWritePost`.
 
 = 2.8.1 =
 
-  * Fixed a bug caused by the non-escaped buffer name "[Fuzzyfinder]".
+  * Fixed a bug caused by the non-escaped buffer name `"[Fuzzyfinder]"`.
   * Fixed a command to open in a new tab page in Buffer mode.
 = 2.8 =
 
@@ -89,13 +89,13 @@
 = 2.6.1 =
 
   * Fixed a bug related to floating-point support.
-  * Added support for GetLatestVimScripts.
+  * Added support for `GetLatestVimScripts`.
 
 = 2.6 =
 
   * Revived MRU-command mode. The problem with a command-line abbreviation was solved.
   * Changed the specification of the information file.
-  * Added :FuzzyFinderEditInfo command.
+  * Added `:FuzzyFinderEditInfo` command.
 
 = 2.5.1 =
 
@@ -114,7 +114,7 @@
 
 = 2.3 =
 
-  * Added a key mapping to open items in a new tab page and g:FuzzyFinderOptions.Base.key_open_tab opton.
+  * Added a key mapping to open items in a new tab page and `g:FuzzyFinderOptions.Base.key_open_tab` opton.
   * Changed to show Fuzzyfinder window above last window even if 'splitbelow' was set.
   * Changed to set nocursorline and nocursorcolumn in Fuzzyfinder.
   * Fixed not to push up a buffer number unlimitedly.
@@ -142,26 +142,26 @@
 
   * Added the tag mode.
   * Added the tagged-file mode.
-  * Added :FuzzyFinderRemoveCache command.
+  * Added `:FuzzyFinderRemoveCache` command.
   * Restructured the option system. many options are changed names or default values of some options.
   * Changed to hold and reuse caches of completion lists by default.
   * Changed to set filetype 'fuzzyfinder'.
   * Disabled the MRU-command mode by default because there are problems.
-  * Removed FuzzyFinderAddMode command.
+  * Removed `:FuzzyFinderAddMode` command.
 
 = 1.5 =
 
   * Added the directory mode.
   * Fixed the bug that it caused an error when switch a mode in Insert mode.
-  * Changed g:FuzzyFinder_KeySwitchMode type to a list.
+  * Changed g:`FuzzyFinder_KeySwitchMode` type to a list.
 
 = 1.4 =
 
   * Changed the specification of the information file.
   * Added the MRU-commands mode.
-  * Renamed :FuzzyFinderAddFavorite command to :FuzzyFinderAddFavFile.
-  * Renamed g:FuzzyFinder_MruModeVars option to g:FuzzyFinder_MruFileModeVars.
-  * Renamed g:FuzzyFinder_FavoriteModeVars option to g:FuzzyFinder_FavFileModeVars.
+  * Renamed `:FuzzyFinderAddFavorite` command to `:FuzzyFinderAddFavFile`.
+  * Renamed `g:FuzzyFinder_MruModeVars` option to `g:FuzzyFinder_MruFileModeVars`.
+  * Renamed `g:FuzzyFinder_FavoriteModeVars` option to `g:FuzzyFinder_FavFileModeVars`.
   * Changed to show registered time of each item in MRU/favorite mode.
   * Added 'timeFormat' option for MRU/favorite modes.
 
@@ -178,7 +178,7 @@
   * Added the favorite mode.
   * Added new features, which are abbreviations and multiple search.
   * Added 'abbrevMap' option for each mode.
-  * Added g:FuzzyFinder_MruModeVars['ignoreSpecialBuffers'] option.
+  * Added `g:FuzzyFinder_MruModeVars['ignoreSpecialBuffers']` option.
   * Fixed the bug that it did not work correctly when a user have mapped `<C-p>` or `<Down>`.
 
 = 1.0 =
@@ -202,26 +202,26 @@
   * Improved response by aborting processing too many items.
   * Changed to be able to open a buffer/file not only in previous window but also in new window.
   * Fixed a bug that recursive searching with '**' does not work.
-  * Added g:FuzzyFinder_CompletionItemLimit option.
-  * Added g:FuzzyFinder_KeyOpen option.
+  * Added `g:FuzzyFinder_CompletionItemLimit` option.
+  * Added `g:FuzzyFinder_KeyOpen` option.
 
 = 0.4 =
 
   * Improved response of the input.
   * Improved the sorting algorithm for completion items. It is based on the matching level. 1st is perfect matching, 2nd is prefix matching, and 3rd is fuzzy matching.
-  * Added g:FuzzyFinder_ExcludePattern option.
-  * Removed g:FuzzyFinder_WildIgnore option.
-  * Removed g:FuzzyFinder_EchoPattern option.
-  * Removed g:FuzzyFinder_PathSeparator option.
-  * Changed the default value of g:FuzzyFinder_MinLengthFile from 1 to 0.
+  * Added `g:FuzzyFinder_ExcludePattern` option.
+  * Removed `g:FuzzyFinder_WildIgnore` option.
+  * Removed `g:FuzzyFinder_EchoPattern` option.
+  * Removed `g:FuzzyFinder_PathSeparator` option.
+  * Changed the default value of `g:FuzzyFinder_MinLengthFile` from 1 to 0.
 
 = 0.3 =
 
-  * Added g:FuzzyFinder_IgnoreCase option.
-  * Added g:FuzzyFinder_KeyToggleIgnoreCase option.
-  * Added g:FuzzyFinder_EchoPattern option.
+  * Added `g:FuzzyFinder_IgnoreCase` option.
+  * Added `g:FuzzyFinder_KeyToggleIgnoreCase` option.
+  * Added `g:FuzzyFinder_EchoPattern` option.
   * Changed the open command in a buffer mode from ":edit" to ":buffer" to avoid being reset cursor position.
-  * Changed the default value of g:FuzzyFinder_KeyToggleMode from `<C-Space>` to `<F12>` because `<C-Space>` does not work on some CUI environments.
+  * Changed the default value of `g:FuzzyFinder_KeyToggleMode` from `<C-Space>` to `<F12>` because `<C-Space>` does not work on some CUI environments.
   * Changed to avoid being loaded by Vim before 7.0.
   * Fixed a bug with making a fuzzy pattern which has '\'.
 
