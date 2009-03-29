@@ -1,8 +1,0 @@
-  * [Introduction]
-  * [Installation]
-  * [Usage]
-  * [Options]
-  * [SettingExample]
-  * [SpecialThanks]
-  * For Japanese
-  ** [DescriptionJapanese Description in Japanese]
