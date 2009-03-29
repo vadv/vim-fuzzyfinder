@@ -1,4 +1,3 @@
-#labels Featured
 Documentation for fuzzyfinder.vim version 2.19
 
 = Table of Contents =
