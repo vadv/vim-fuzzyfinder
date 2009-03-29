@@ -1,5 +1,7 @@
 #summary Usage
 
+<wiki:toc max_depth="1" />
+
 = Starting Fuzzyfinder =
 
 You can start Fuzzyfinder by the following commands:
