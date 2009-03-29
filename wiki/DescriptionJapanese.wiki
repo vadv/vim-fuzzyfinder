@@ -531,7 +531,6 @@ nnoremap <silent> <C-f><C-e> :FuzzyFinderEditInfo<CR>
 
 http://d.hatena.ne.jp/ns9tks/searchdiary?word=*%5Brelease%5D
 
-= 連絡先 =
+= バグや要望などの報告先 =
 
-メールかリリースノートのコメント欄でどうぞ。
-バグや要望に関しては、できれば [http://code.google.com/p/vim-fuzzyfinder/issues/list Issues] に登録するようにしてください。
+[http://code.google.com/p/vim-fuzzyfinder/issues/list Issues] に登録するようにしてもらえると助かります。
