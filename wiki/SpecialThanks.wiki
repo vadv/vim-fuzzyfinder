@@ -1,7 +1,5 @@
 #summary Special thanks
 
-Special thanks to:
-
   * Vincent Wang
   * Ingo Karkat
   * Nikolay Golubev
