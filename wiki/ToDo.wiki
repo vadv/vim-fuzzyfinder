@@ -1,3 +1,0 @@
-#summary ToDo
-
-  * Detail description for information file (about data/stats)
