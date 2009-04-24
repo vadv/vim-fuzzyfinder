@@ -5,7 +5,7 @@
   * Fixed a bug that an error occurs if current directory included spaces. Thanks id:cho45 and id:secondlife.
   * Implemented a feature to reuse a window containing target buffer.
   * Added `g:FuzzyFinderOptions.Buffer.reuse_window`, `g:FuzzyFinderOptions.File.reuse_window`, `g:FuzzyFinderOptions.MruFile.reuse_window`, `g:FuzzyFinderOptions.Bookmark.reuse_window`, and `g:FuzzyFinderOptions.TaggedFile.reuse_window` option.
-  * Changed to use 'omnifunc' instead of 'completefunc'.
+  * Changed to use 'omnifunc' instead of 'completefunc'. Now you can use `<C-u>` to delete all entered characters.
   * Changed default value of `g:FuzzyFinderOptions.Base.key_next_mode` option.
   * Changed default value of `g:FuzzyFinderOptions.Base.key_prev_mode` option.
   * Changed default value of `g:FuzzyFinderOptions.Base.key_ignore_case` option.
