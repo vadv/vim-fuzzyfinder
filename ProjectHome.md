@@ -1,0 +1,1 @@
+The project page has been moved: http://bitbucket.org/ns9tks/vim-fuzzyfinder/

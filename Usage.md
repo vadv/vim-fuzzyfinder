@@ -1,0 +1,157 @@
+
+
+# Starting Fuzzyfinder #
+
+You can start Fuzzyfinder by the following commands:
+
+  * `:FuzzyFinderBuffer` - launchs Fuzzyfinder as Buffer mode.
+  * `:FuzzyFinderFile` - launchs Fuzzyfinder as File mode.
+  * `:FuzzyFinderDir` - launchs Fuzzyfinder as Directory mode.
+  * `:FuzzyFinderMruFile` - launchs Fuzzyfinder as MRU-File mode.
+  * `:FuzzyFinderMruCmd` - launchs Fuzzyfinder as MRU-Command mode.
+  * `:FuzzyFinderBookmark` - launchs Fuzzyfinder as Bookmark mode.
+  * `:FuzzyFinderTag` - launchs Fuzzyfinder as Tag mode.
+  * `:FuzzyFinderTaggedFile` - launchs Fuzzyfinder as Tagged-File mode.
+
+It is recommended to map these commands. These commands can take initial
+text as a command argument. The text will be entered after Fuzzyfinder
+launched. If a command was executed with a ! modifier (e.g. `:FuzzyFinderTag!`),
+it enables the partial matching instead of the fuzzy matching.
+
+# In Fuzzyfinder #
+
+An entered pattern is converted to a fuzzy pattern and items which match
+the pattern is shown in a completion menu.
+
+A completion menu is shown when you type at an end of a line and the
+length of the entered pattern is more than setting value. By default, it
+is shown at the beginning.
+
+The number of items shown in the completion menu is limited (100, by
+default) to speed up the response time.
+
+Fuzzyfinder sorts completion items with some rules:
+  * A perfect matching puts first.
+  * A sequential matching puts higher than a fragmentary matching.
+  * A backward matching puts higher than a forward matching.
+  * A short item is put higher than a long item.
+
+Plus, Fuzzyfinder has a learning system. An item which has been
+completed in the past with a current pattern is placed upper.
+
+The first item in the completion menu will be selected automatically.
+
+You can open a selected item in various ways:
+  * `<CR>` - opens in a previous window.
+  * `<C-j>` - opens in a split window.
+  * `<C-k>` - opens in a vertical-split window.
+  * `<C-]>` - opens in a new tab page.
+
+To cancel and return to previous window, leave Insert mode.
+
+To Switch the mode without leaving Insert mode, use `<C-l>` or `<C-o>`.
+This key mapping is customizable.
+
+If you want to temporarily change whether or not to ignore case, use
+`<C-t>`. This key mapping is customizable.
+
+# To Hide The Completion Menu Temporarily In Fuzzyfinder #
+
+You can close it by `<C-e>` and reopen it by `<C-x><C-u>`.
+
+# About Highlighting #
+
+Fuzzyfinder highlights the buffer with "Error" group when the number of
+completion items found is 0 or over enumerating\_limit.
+
+# About Alternative Approach For Tag Jump #
+
+Following mappings are replacements for :tag and `<C-]>`:
+
+```
+nnoremap <silent> <C-f><C-t> :FuzzyFinderTag!<CR>
+nnoremap <silent> <C-]>      :FuzzyFinderTag! <C-r>=expand('<cword>')<CR><CR>
+```
+
+In the tag mode, it is recommended to use partial matching instead of
+fuzzy matching.
+
+# About Tagged File Mode #
+
+The files which are included in the current tags are the ones which are
+related to the current working environment. So this mode is a pseudo project mode.
+
+# About Usage Of Command Argument #
+
+As an example, if you want to launch file-mode Fuzzyfinder with the full
+path of current directory, map like below:
+
+```
+nnoremap <C-p> :FuzzyFinderFile <C-r>=fnamemodify(getcwd(), ':p')<CR><CR>
+```
+
+Instead, if you want the directory of current buffer and not current
+directory:
+
+```
+nnoremap <C-p> :FuzzyFinderFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
+```
+
+# About Abbreviations And Multiple Search #
+
+You can use abbreviations and multiple search in each mode. For example,
+set as below:
+
+```
+let g:FuzzyFinderOptions.Base.abbrev_map  = {
+      \   "^WORK" : [
+      \     "~/project/**/src/",
+      \     ".vim/plugin/",
+      \   ],
+      \ }
+```
+
+And type "WORKtxt" in file-mode Fuzzyfinder, then it searches by
+following patterns:
+
+  * `"~/project/**/src/*t*x*t*"`
+  * `".vim/plugin/*t*x*t*"`
+
+# About Bookmark Mode #
+
+You can jump to a line you have added to bookmarks beforehand.
+Fuzzyfinder adjusts a line number for jump. If a line of bookmarked
+position does not match to a pattern when the bookmark was added,
+Fuzzyfinder searches a matching line around bookmarked position. So you
+can jump to a bookmarked line even if the line is out of bookmarked
+position. If you want to jump to bookmarked line number, set
+`g:FuzzyFinderOptions.Bookmark.searching_range` option to 0.
+
+# Adding Bookmark #
+
+You can add a cursor line to bookmarks by `:FuzzyFinderAddBookmark` command.
+Execute that command and you will be prompted to enter a bookmark name.
+
+# About Information File #
+
+Fuzzyfinder writes information of the MRU, bookmark, etc to the file by
+default (~/.vimfuzzyfinder).
+
+`:FuzzyFinderEditInfo` command is helpful in editing your information
+file. This command reads the information file in new unnamed buffer.
+Write the buffer and the information file will be updated.
+
+<a href='Hidden comment:  TODO: =======================================================
+I believe you will understand the semantics, so I .
+<Mode Name>.data<Tab>...  - data
+<Mode Name>.stats<Tab>... - statistics
+'></a>
+
+# About Cache #
+
+Once a cache was created, It is not automatically updated to speed up
+the response time by default. To update it, use `:FuzzyFinderRemoveCache` command.
+
+# About Migemo #
+
+Migemo is a search method for Japanese language.
